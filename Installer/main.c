@@ -30,8 +30,8 @@ int ExtractRes(HINSTANCE hInst, ULONG_PTR IntRes, const char* Type, const char* 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow)
 {
 	if (MessageBox(0, "Installing HitFilm Stylez.\nClick Ok to select your HitFilm EXE.",
-		"HitFilm Stylez", MB_OKCANCEL | MB_ICONINFORMATION));// != IDOK)
-		//return 0;
+		"HitFilm Stylez", MB_OKCANCEL | MB_ICONINFORMATION)) != IDOK)
+		return 0;
 
 	char szfile[MAX_PATH] = { 0 }, dir[MAX_PATH] = { 0 };
 
